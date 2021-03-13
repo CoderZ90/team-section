@@ -1,0 +1,74 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+}
+
+.person-container {
+    min-height: 100vh;
+    display: flex;
+}
+
+.person {
+    flex: 2;
+    overflow: hidden;
+    position: relative;
+    transition: 0.5s ease;
+}
+
+.person:hover {
+    flex: 5;
+    cursor: pointer;
+}
+
+.person img {
+    position: absolute;
+    height: 100vh;
+    left: 50%;
+    transform: translateX(-50%);
+    filter: grayscale(10);
+    transition: 0.2s ease;
+}
+
+.info {
+    position: absolute;
+    color: #fff;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    bottom: -200px;
+    text-align: center;
+    transition: 0.4s ease;
+}
+
+.info .social-media {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.social-media a {
+    text-decoration: none;
+    color: #fff;
+    background: #111;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 17px;
+}
+
+.person:hover .info {
+    bottom: 80px;
+}
+
+.person:hover img {
+    filter: grayscale(0);
+}
